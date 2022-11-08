@@ -1,0 +1,73 @@
+<h1>HTML Links</h1>
+
+<!-- <p>HTML links are hyperlinks. 
+
+</br>
+
+    You can click on a link and jump to another document.
+</br>
+    
+    When you move the mouse over a link, the mouse arrow will turn into a little hand.</p> -->
+
+<h3>HTML Links - Syntax</h3>
+<p>The HTML <span style="color: tomato;">< a ></a></span> tag defines a hyperlink. It has the following syntax:</p>
+
+<!-- <a href="url"></a> -->
+<!-- The most important attribute of the <a> element is the href attribute, which indicates the link's destination. -->
+
+<p><a href="https://www.w3schools.com/">Visit W3schools.com!</p></a>
+
+<h3>HTML Links - The target Attribute</h3>
+<p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.</p>
+
+<p>The target attribute specifies where to open the linked document.</p>
+<p>The target attribute can have one of the following values:</p>
+
+<ul>
+    <li>
+        <span style="color: tomato;">_self</span> - Default. Opens the document in the same window/tab as it was clicked
+    </li>
+    <li>
+        <span style="color: tomato;">_blank</span> - Opens the document in a new window or tab
+    </li>
+    <li>
+        <span style="color: tomato;">_parent</span> - Opens the document in the parent frame
+    </li>
+    <li>
+        <span style="color: tomato;">_top</span> - Opens the document in the full body of the window
+    </li>
+</ul>
+
+<h4>The target Attribute</h4>
+
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools! - blank</a> <br>
+<a href="https://www.w3schools.com/" target="_parent">Visit W3Schools! - parent</a> <br>
+<a href="https://www.w3schools.com/" target="_top">Visit W3Schools! - top</a> 
+
+
+
+<p>If target="_blank", the link will open in a new browser window or tab.</p>
+
+<h3>Absolute URLs vs. Relative URLs</h3>
+<p>Both examples above are using an absolute URL (a full web address) in the href attribute.</p>
+<p>A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):</p>
+
+<h2>Absolute URLs</h2>
+<p><a href="https://www.w3.org/">W3C</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+
+<h2>Relative URLs</h2>
+<p><a href="html_images.asp">HTML Images</a></p>
+<p><a href="/css/default.asp">CSS Tutorial</a></p>
+<p><a href="./color.html">Back to my color html file</a></p>
+
+<h3>HTML Links - Use an Image as a Link</h3>
+<!-- To use an image as a link, just put the <img> tag inside the <a> tag: -->
+
+
+<h3>Button as a Link</h3>
+<button onclick="document.location='./color.html'">Button to local terminal</button>
+
+<h2>Link Titles</h2>
+<p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .lb-on{
+        display: none;
+    } */
+</style>
+
+<body>
+    <h2>HTML JavaScript</h2>
+    <p>JavaScript makes HTML pages more dynamic and interactive.</p>
+
+    <p>Example JS for displaying date and time without formating.</p>
+    <button onclick="clickedDate()">Display Date and Time</button>
+    <p id="showDate"></p>
+
+    <p>Please change some text when click button below</p>
+    <button onclick="changeMe()">Change Me</button>
+    <p id="text">Happy Monday</p>
+
+    <!-- Light Bulb Example======================================== -->
+    <h3>Let's do an example of light bulb - on and off</h3>
+    <p>One way is to have the light bulb on to display none, this using the attributes of style and display</p>
+
+    <div class="lb-on">
+
+        <img id="lightOn" src="./bulbon.gif" width="100px" height="120px" alt="light bulb on">
+    </div>
+    <div class="lb-off">
+
+        <img id="lightOff" src="./pic_bulboff.gif" width="100px" height="120px" alt="light bulb off">
+    </div>
+    <p>
+
+        <button onclick="displayOn()">Light On</button>
+        <button onclick="displayOff()">Light Off</button>
+    </p>
+<!-- Different way===================================================== -->
+    <h3>Let's create a different way to turn on/off light bulb</h3>
+    <p>This method will only display one image first, and using src attributes to change the image from off to on with
+        the support of condition statement.</p>
+
+    <img id="lightbulb" src="./pic_bulboff.gif" width="100px" height="120px" alt="lightOff">
+    <p>
+
+        <button onclick="light(1)">Light on</button>
+        <button onclick="light(0)">Light off</button>
+
+    </p>
+
+
+    <script>
+        function clickedDate() {
+            let showDate = document.getElementById("showDate")
+            showDate.textContent = Date()
+        }
+
+        function changeMe() {
+
+            document.getElementById("text").textContent = "Thank you!"
+            document.getElementById("text").style.fontSize = "25px"
+            document.getElementById("text").style.backgroundColor = "yellow"
+
+
+        }
+
+        // Function for displaying light bulb - on/off
+        document.getElementById("lightOff").style.display = "block";
+        document.getElementById("lightOn").style.display = "none";
+
+
+        function displayOn() {
+            document.getElementById("lightOn").style.display = "block";
+            document.getElementById("lightOff").style.display = "none";
+
+        }
+
+        function displayOff() {
+            document.getElementById("lightOff").style.display = "block";
+            document.getElementById("lightOn").style.display = "none";
+
+        }
+
+        // A different function to display on and off for the light bulb, by creating a parameter to pass to the condition statement
+        function light(on_off){
+            var pic;
+            if (on_off==0){
+                pic = "./pic_bulboff.gif";
+            }else{
+                pic = "./bulbon.gif"
+            }
+            document.getElementById("lightbulb").src = pic;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
